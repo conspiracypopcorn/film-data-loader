@@ -14,16 +14,16 @@ Download and extract the two datasets:
 - https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
 - https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7#movies_metadata.csv 
 
-####Requirements:
+#### Requirements:
 
 - Python 3.6 or later
 - Docker
 
-####Setup: run Postgres docker container
+#### Setup: run Postgres docker container
 
     docker run --name film_data -e POSTGRES_PASSWORD=secret -d -p 5433:5432 postgres
     
-####Run script:
+#### Run script:
 
 - Optional: create virtual environment
 
