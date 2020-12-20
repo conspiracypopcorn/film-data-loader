@@ -26,23 +26,23 @@ Download and extract the two datasets:
 #### Run script:
 
 - Optional: create virtual environment
-
-
-    python -m virtualenv venv
-    source venv/bin/activate
-    
+```bash
+python -m virtualenv venv
+source venv/bin/activate
+```
 - Install dependencies
-
-
-    pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
  
 
 - Run script. The data will be loaded in table `films`.
+```bash
+python load_films.py --movies <PATH TO movies_metadata.csv> \
+    --wiki <PATH TO enwiki-latest-abstract.xml> \
+    --psql_config postgresql://<USER>:<PASSWORD>@<HOST>:<PORT>/<DB>
+```
 
-
-    python load_films.py --movies <PATH TO movies_metadata.csv> \
-        --wiki <PATH TO enwiki-latest-abstract.xml> \
-        --psql_config postgresql://<USER>:<PASSWORD>@<HOST>:<PORT>/<DB>
         
 - To run locally use: `--psql_config postgresql://postgres:secret@localhost:5433/postgres`
 
